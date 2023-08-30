@@ -1,0 +1,27 @@
+.tasks{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: .75rem;
+    max-width: 46rem;
+    font-size: 0.875rem;
+
+    margin: 0.75rem auto;
+    padding: 1rem;
+
+    background-color: var(--gray-500);
+    border-radius: 8px;
+}
+
+.tasks span{
+    border: 1px solid var(--blue);
+    width: 1.09rem;
+    height: 1.09rem;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.tasks p{
+    flex: 1;
+}

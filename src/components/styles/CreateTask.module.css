@@ -1,0 +1,23 @@
+.createTask{
+    display: flex;
+    justify-content: space-between;
+    max-width: 46rem;
+
+    margin: 4.06rem auto;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+.createTask p span{
+    margin-left: 0.5rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 50%;
+    
+    background-color: var(--gray-400);
+    color: var(--gray-200);
+}
+.createTask .newCreateTasks{
+    color: var(--blue);
+}
+.createTask .completed{
+    color: var(--purple);
+}

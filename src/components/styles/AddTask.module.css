@@ -1,0 +1,42 @@
+.addTask{
+    display: flex;
+    max-width: 46rem;
+
+    margin: auto;
+    justify-content: center;
+    gap: 0.5rem;
+
+    margin-top: -1.68rem;
+}
+.addTask input[type='text']{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    color: var(--gray-100);
+}
+.addTask button{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    font-weight: bold;
+    background-color: var(--blue-dark);
+    border: none;
+    border-radius: 8px;
+    color: var(--gray-100);
+
+    cursor: pointer;
+}
+.addTask > button:hover{
+    background-color: var(--blue);
+}
+
+form{
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
