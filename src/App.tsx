@@ -22,12 +22,16 @@ function App() {
                     )
   }
 
+  function removeTask(id:number){
+    return setTasks(prevTask => prevTask.filter(tasks => tasks.id !== id))
+  }
+
   return (
     <>
       <Header />
       <AddTask newTaskUser={onNewTasks} />
       <CreateTask />
-      <Tasks newTasks={tasks} />     
+      <Tasks newTasks={tasks} removeTask={removeTask} />     
     </>
   )
 }

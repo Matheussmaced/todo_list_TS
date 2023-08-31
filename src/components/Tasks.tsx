@@ -10,14 +10,12 @@ interface task{
 
 interface tasksProps{
     newTasks: task[];
+    removeTask: (id:number)=>void;
 }
 
-export const Tasks = ({newTasks}:tasksProps) => {    
+export const Tasks = ({newTasks, removeTask}:tasksProps) => {    
 
-    const idTask = newTasks.map(taskId => (taskId.id))
-    const checkedTask = newTasks.map(taskChecked => (taskChecked.checked))
-
-    console.log(idTask, checkedTask)
+// mudar o estilo do botão e adicionar checked 
 
     return(
         <div className={styles.tasksConteiner}>
@@ -25,7 +23,9 @@ export const Tasks = ({newTasks}:tasksProps) => {
                 <div className={styles.tasks} key={newTask.id}>
                     <span></span>
                     <p>{newTask.content}</p>
-                    {<BsTrash className ={styles.trash} />}
+                    <button onClick={() => removeTask(newTask.id)}>
+                        {<BsTrash className ={styles.trash} />}
+                    </button>
                 </div>
             ))}
         </div>
