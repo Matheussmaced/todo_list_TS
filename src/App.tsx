@@ -16,14 +16,30 @@ function App() {
  
 
   function onNewTasks(value:string){
-    return setTasks(prevTask => [...prevTask, {id: new Date().getTime(),
-                    content: value,
-                    checked: false,}]
-                    )
+    
+    const newUserTasks =  {
+      id: new Date().getTime(),
+      content: value,
+      checked: false,
+    }
+
+    return setTasks(prevTask => [...prevTask, newUserTasks])
   }
 
   function removeTask(id:number){
     return setTasks(prevTask => prevTask.filter(tasks => tasks.id !== id))
+  }
+
+  // fazer o checked em casa um
+  function markTaskAsChecked(id: number) {
+    setTasks((prevTasks) =>
+      prevTasks.map((taskTest) => {
+        if (taskTest.id === id) {
+          return { ...taskTest, checked: !taskTest.checked };
+        }
+        return taskTest;
+      })
+    );
   }
 
   return (
@@ -31,7 +47,7 @@ function App() {
       <Header />
       <AddTask newTaskUser={onNewTasks} />
       <CreateTask />
-      <Tasks newTasks={tasks} removeTask={removeTask} />     
+      <Tasks newTasks={tasks} removeTask={removeTask} markTaskChecked={markTaskAsChecked}/>     
     </>
   )
 }

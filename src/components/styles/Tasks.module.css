@@ -12,7 +12,6 @@
     background-color: var(--gray-500);
     border-radius: 8px;
 }
-
 .tasks span{
     border: 1px solid var(--blue);
     width: 1.09rem;
@@ -21,7 +20,32 @@
 
     cursor: pointer;
 }
-
 .tasks p{
     flex: 1;
+    word-break: break-word;
+}
+.tasks > button{
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    color: var(--gray-300);
+    padding: 0.31rem 0.37rem;
+    cursor: pointer;
+
+    transition: .2s;
+}
+.tasks > button:hover{
+    transform: scale(1.2);
+}
+
+.checked{
+    width: 1.01rem;
+    height: 1.01rem;
+    border-radius: 50%;
+    background-color: var(--purple-dark);
+
+
+    text-align: center;
+
+    color: var(--white);
 }
